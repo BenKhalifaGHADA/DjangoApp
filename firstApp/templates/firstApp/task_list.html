@@ -1,0 +1,33 @@
+<nav style="background: #eee;  padding: 10px; margin-bottom:20px;">
+{% if user.is_authenticated %}
+<span> Welcome, <strong>{{user.username}} </strong>!</span>
+<form action="{% url 'logout' %}" method="post" style="display:inline;">
+{% csrf_token %}
+<button type="submit">Logout</button>
+</form>   
+{% else %}
+<a href="{% url 'login' %}">Login </a>
+{% endif %}
+</nav>
+
+<table border="1">
+   <tr>
+     <th>Title</th>
+     <th>description</th>
+     <th>Due Date</th>
+     <th>Actions</th>
+   </tr>
+   {% for task in tasks %}
+   <tr>
+<td>{{task.title}}</td>
+<td>{{task.description }}</td>
+<td>Due Date: {{ task.due_date }}</td>
+<td><a href="{% url 'taskdetail' task.id  %}">View details</a>
+<a href="{% url 'taskupdate' task.id  %}">Update</a>
+<a href="{% url 'taskdelete' task.id  %}">Delete</a></td>
+</tr>
+{% empty %}
+   <p>No tasks available.</p>
+{% endfor %}
+
+</table>
