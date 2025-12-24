@@ -1,4 +1,4 @@
-Django Workshop: TaskMaster Project 🎓
+ #🎓 Django Workshop: TaskMaster Project 
 Welcome to the Introduction to Django Framework workshop. This repository serves as the practical support for our 15-hour training session.
 
 We will build TaskMaster, a collaborative task management tool that allows users to create tasks, assign them to people, and track their progress.
@@ -127,4 +127,5 @@ class Task(models.Model):
 
     def __str__(self):
         return self.title
+
 
