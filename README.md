@@ -87,23 +87,6 @@ Access the App:
 
 Website: http://127.0.0.1:8000/
 Admin Panel: http://127.0.0.1:8000/admin/
-🛤 Workshop Roadmap (Branches)
-This repository is structured using Git branches to represent each step of the workshop. You can jump to any step using git checkout <branch-name>.
-
-## Project Branches Overview
-
-| Branch        | Description                         | Key Concepts                                |
-|---------------|-------------------------------------|---------------------------------------------|
-| main          | Initial setup and README            | Environment, Git                            |
-| step-01-setup | Django project structure created    | django-admin, manage.py, settings.py        |
-| step-02-models| Task and Person models defined      | ORM, Fields, ForeignKeys, Migrations        |
-| step-03-admin | Admin panel configuration           | ModelAdmin, list_display, Filters           |
-| step-04-views | Basic Views and Templates           | FBV, URL Routing, DTL (Templates)           |
-| step-05-forms | CRUD operations using Forms         | ModelForm, CSRF, Validation                 |
-| step-06-cbv   | Refactoring to Class Based Views    | ListView, CreateView, UpdateView, DeleteView|
-| step-07-auth  | User Authentication                 | Login/Logout, Permissions, Decorators       |
-| step-08-api   | REST API with DRF                   | Serializers, JSON Endpoints                 |
-
 📝 Models Reference
 For the workshop, we will be using the following schema in core/models.py:
 
@@ -132,6 +115,7 @@ class Task(models.Model):
 
     def __str__(self):
         return self.title
+
 
 
 
