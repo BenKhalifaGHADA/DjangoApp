@@ -21,7 +21,7 @@ Option A: Standard Setup (pip)
 Clone the repository:
 
 git clone https://github.com/BenKhalifaGHADA/DjangoApp
-cd DjangoWorkshop25
+cd DjangoApp
 Create a virtual environment:
 
 # Windows
@@ -115,6 +115,7 @@ class Task(models.Model):
 
     def __str__(self):
         return self.title
+
 
 
 
