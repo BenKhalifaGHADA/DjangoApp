@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'firstApp',
 ]
 
@@ -124,3 +125,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL= 'firstApp.Person'
 LOGIN_REDIRECT_URL='task_list'
 LOGOUT_REDIRECT_URL='firstApp_home'
+
+#Code à utiliser pour changer les persmissions
+REST_FRAMEWORK={
+    'DEFAULT_PERSMISSION_CLASSES':[
+        'rest_framework.persmissions.IsAuthenticated',
+    ]
+}

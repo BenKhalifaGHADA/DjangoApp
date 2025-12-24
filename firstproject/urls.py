@@ -17,10 +17,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 
+
+from rest_framework import routers
+from firstApp.views import TaskViewSet
+router=routers.DefaultRouter()
+router.register('tasks', TaskViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('firstapp/',include('firstApp.urls')),
     path('accounts/',include('django.contrib.auth.urls')),
+    path('api/', include(router.urls)) #ici je veux utiliser le route d'un projet pour cela nous avons ajouté les configurations nécessaires au dessus 
    
     
 ]
