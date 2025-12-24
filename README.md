@@ -19,7 +19,7 @@ You can set up the project using standard Python tools (pip) or the modern, high
 Option A: Standard Setup (pip)
 Clone the repository:
 
-git clone https://github.com/LindaOuer/DjangoWorkshop25.git
+git clone https://github.com/BenKhalifaGHADA/DjangoApp
 cd DjangoWorkshop25
 Create a virtual environment:
 
@@ -127,3 +127,4 @@ class Task(models.Model):
 
     def __str__(self):
         return self.title
+
